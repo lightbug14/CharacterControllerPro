@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>        
+            <link rel="stylesheet" type="text/css" href="LightTheme.css" id="light">
+            <!-- <link rel="stylesheet" type="text/css" href="DarkTheme.css" id="theme"> -->
+            <link rel="stylesheet" type="text/css" href="Base.css">
+        <title>Lightbug</title>
+    </head>
+
+    <script>
+        function changeCSS(cssFile, cssLinkIndex) 
+        {    
+            var oldlink = document.getElementsByTagName("link").item(cssLinkIndex);    
+            var newlink = document.createElement("link");
+
+            newlink.setAttribute("rel", "stylesheet");
+            newlink.setAttribute("type", "text/css");
+            newlink.setAttribute("href", cssFile);
+
+            document.getElementsByTagName("head").item.replaceChild(newlink, oldlink);
+        }
+
+        function changeToLight() { 
+            document.getElementById("theme").href = "LightTheme.css";
+        }
+
+        function changeToDark() { 
+            document.getElementById("theme").href = "DarkTheme.css";
+        }
+        
+
+    </script>
+        
+
+
+        
+    <body>
+
+        <button  onclick="changeToLight();" type="button">Light theme</button>
+        <button onclick="changeToDark();">Dark theme</button>
+        
+        <a href="Character Controller Pro/UserManual.pdf">User Manual</a>
+
+        <div class="contentBox">
+            <div class="presentation">    
+
+                <div class="presentationImg">
+                    <img src="WebResources/DarkLogo.png" width="200px" style="border-radius: 25px; margin: 5px;">
+                </div>
+
+                <div class="presentationTitle">
+                    Lightbug
+                </div>
+
+                <div class="presentationDesc" style="font-size: 45px">
+                    <em>This site is under construction!</em>
+                </div>
+                    
+            </div>
+        </div>
+    
+        
+        
+
+        <div class="contentBox">
+                <div id="horizontalSeparator">
+                   Showcase
+                </div>
+            <div id="gridContainerNx2">
+            
+                <div>
+                <a href="Kinematic2D.html"><img src="WebResources/K2D/K2D_Icon.png" height="300"></a>
+                <p>Kinematic 2D</p>
+            </div>    
+            
+            
+            <div>
+                <a href="GrabIt.html"><img src="WebResources/handGrabIt.png" height="300"></a>
+                <p>Grab It</p>
+            </div> 
+
+            <div>
+                <a href="LaserMachine.html"><img src="WebResources/LaserMachine.png" height="300"></a>
+                <p>Laser Machine</p>
+            </div> 
+        </div>
+    </div>
+        
+
+        
+<!-- <hr></hr> -->
+
+<div class="contentBox">
+        <div id="horizontalSeparator">Contact</div>
+        <p> Email : <a href="mailto:lightbug14@gmail.com">lightbug14@gmail.com</a></p>
+        <p> Unity Connect Profile : <a href="https://connect.unity.com/u/juan-salice">Profile</a></p>
+        
+        
+</div>
+
+
+
+        
+        <a href="#"> <button style="margin-top: 80px">Return to the top</button> </a> 
+        
+
+    </body>
+
+</html>
+

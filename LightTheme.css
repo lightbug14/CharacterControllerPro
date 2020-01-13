@@ -1,0 +1,53 @@
+html 
+{
+    background-color: #f0f0f0;
+    background-image: linear-gradient( to right , #cacaca, #f0f0f0);
+    color: #131313;
+}
+
+.presentationTitle
+{    
+    text-shadow: 255-rgb(54, 54, 54) 2px 2px 20px;
+}
+
+#horizontalSeparatorTitle
+{
+    color: rgb(241, 241, 241);
+    background-color: rgb(44, 44, 44);
+}
+
+#horizontalSeparator
+{
+    background-color: #dadada;
+    background-image: linear-gradient( to right , #929292, #cccccc);
+    box-shadow: 5px 5px 10px black;     
+}
+
+#horizontalSeparatorSub
+{
+    background-color: #dadada;
+    background-image: linear-gradient( to right , #929292, #cccccc);
+    box-shadow: 5px 5px 10px black;
+}
+
+.contentBox
+{   
+    
+    background-color: #dadada;
+    background-image: linear-gradient( to right , #a5a5a5, #dadada);
+    box-shadow: 5px 5px 15px black;
+}
+
+#imgNoAlpha > img
+{
+    background: rgb(163, 163, 163);
+}
+
+/* img > p
+{
+
+} */
+
+
+
+
