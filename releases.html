@@ -40,16 +40,23 @@
             <li>PhysicsComponent component.</li>
             <li>CharacterBody component.</li>
             <li>New "Sphere" and "Circle" body types (CharacterBody component).</li>
+            <li>A new "useGravity" toggle for the NormalMovement component.</li>
         </ul>
         <h4>Changes</h4>
 
         <ul>
             <li>The CharacterMotor2D and CharacterMotor3D components were replaced by the CharacterActor component.</li>
+            <li>The ActionBasedPlatform2D and ActionBasedPlatform3D components were replaced by the ActionBasedPlatform component.</li>
+            <li>The NodeBasedPlatform2D and NodeBasedPlatform3D components were replaced by the NodeBasedPlatform component.</li>
             <li>The KinematicSceneController was replaced by the SceneController. Now the SceneController is responsible for updating the characters and the kinematic actors.</li>
             <li>The kinematic platforms and the cameras are now kinematic actors.</li>
         </ul>
 
         <h4>Fixed</h4>
+    
+        <ul>
+            <li>A bug with the vertical not grounded movement (CharacterMotor). This was making the character to slowly descend (depending on the skinWidth value) even if the vertical velocity was zero.</li>
+        </ul>
 
         <!--  -------------------------------------------------  -->
         <hr></hr>
