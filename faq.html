@@ -72,6 +72,12 @@ Any game that requires a physics based capsule shaped character. A RTS game, a 2
 <p>
 The reason behind this decision is extensibility. The full package is defined as Core + implementation. The implementation is built upon the core, so, if you want to re-implement this part, or removing it for complete, you just need to delete one folder and you are good to go. It also serves as a good way to define the scope of each part.
 </p>
+    
+<h3>Can i create a character using any arbitrary scale?</h3>
+
+<p>
+No, CCP currently supports only <1,1,1> scale. If you need to scale your character you should scale the graphics object (what you actually see on screen, the renderer component), then modify the character body size to fit the graphics.
+</p>
 
 <h3>My character consists of a big alien spider that has a weird shape (a composition of colliders), each leg must be procedurally animated and should react to the environment in a particular way. Can this asset handle that?</h3>
 
