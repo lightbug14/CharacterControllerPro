@@ -1,4 +1,27 @@
 
+html 
+{  
+  background: #dbdbdb;
+  color: #000000     
+}
+
+h1 , h2 , h3 , h4 , h5
+{
+  text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.2);
+}
+
+a
+{
+  text-decoration: none;
+  text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.4);
+  color: rgb(38, 0, 109);
+}
+
+a:hover
+{
+  color: rgb(61, 0, 173);
+}
+
 .navigationBar ul{
   /* list-style-type: none;
   margin: 0;
@@ -10,10 +33,10 @@
   margin: 0;
   padding: 0;
   width: 10em;
-  background-color: #000000;
+  background-color: #0f0f0f;
   height: 100%; /* Full height */
-  position: fixed; /* Make it stick, even on scroll */
-  overflow: auto; /* Enable scrolling if the sidenav has too much content */
+  position: fixed;
+  overflow: auto;
 }
 
 .navigationBar li a {
@@ -27,6 +50,7 @@
 .navigationBar li a:hover {
   background-color: rgb(112, 0, 204);
   color: rgb(219, 219, 219);
+  
 }
 
 .navigationBar li  a.active {
@@ -39,4 +63,33 @@
   margin-left:10em;
   padding: 5px 200px 10px 25px;
   height:1000px;
+}
+
+.contentBox
+{       
+    background-color: #a9a6aa;
+    background-image: linear-gradient( to right , #c4c4c4, #d4d4d4);
+    border-radius: 10px;
+    border-style: outset;
+    border-width: thin;
+    border-color: rgba(0, 0, 0, 0.4);
+    /* box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4); */
+}
+
+.contentBox p , .tip p
+{       
+  text-align: left;
+  padding: 5px 5px 5px 15px;
+}
+
+
+
+.tip
+{       
+    background-color: #a9a6aa;
+    background-image: linear-gradient( to right , #c4c4c4, #d4d4d4);
+    border-radius: 10px;
+    border-style: dashed;
+    border-width: thin;
+    border-color: rgba(0, 0, 0, 0.4);
 }
