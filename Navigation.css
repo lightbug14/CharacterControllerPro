@@ -22,6 +22,7 @@ a:hover
   color: rgb(61, 0, 173);
 }
 
+
 .navigationBar ul{
   /* list-style-type: none;
   margin: 0;
@@ -30,13 +31,15 @@ a:hover
   background-color: #f1f1f1; */
 
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   width: 10em;
   background-color: #0f0f0f;
   height: 100%; /* Full height */
   position: fixed;
   overflow: auto;
+
+  
 }
 
 .navigationBar li a {
@@ -44,18 +47,21 @@ a:hover
   color: rgb(196, 196, 196);
   padding: 8px 16px;
   text-decoration: none;
+  text-align: center;
+  
 }
 
 
 .navigationBar li a:hover {
-  background-color: #1f1f1f;
-  color: rgb(219, 219, 219);
   
+  background-color: rgba(255, 255, 255 , 0.05);
+  color: white;
 }
 
 .navigationBar li  a.active {
   background-color: rgb(112, 0, 204);
   color: white;
+  text-shadow: 4px 4px 5px rgba(40, 40, 40, 0.5);
 }
 
 .navigationBody
