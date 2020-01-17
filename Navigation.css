@@ -48,13 +48,13 @@ a:hover
 
 
 .navigationBar li a:hover {
-  background-color: rgb(112, 0, 204);
+  background-color: #1f1f1f;
   color: rgb(219, 219, 219);
   
 }
 
 .navigationBar li  a.active {
-  background-color: #4CAF50;
+  background-color: rgb(112, 0, 204);
   color: white;
 }
 
