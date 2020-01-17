@@ -2,13 +2,21 @@
 html 
 {  
   background: #dbdbdb;
-  color: #000000     
+  color: #111111;
+  /* font-family: "lucida sans", serif;  */
+
 }
 
-h1 , h2 , h3 , h4 , h5
+body
 {
-  text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.2);
+  margin: 0;
 }
+
+
+/* h1 , h2 , h3 , h4 , h5
+{
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+} */
 
 a
 {
@@ -23,6 +31,11 @@ a:hover
 }
 
 
+ul
+{
+  list-style-type: square;
+}
+
 .navigationBar ul{
   /* list-style-type: none;
   margin: 0;
@@ -32,6 +45,7 @@ a:hover
 
   list-style-type: none;
   margin: 0px;
+  border-width: 0ex;
   padding: 0px;
   width: 10em;
   background-color: #0f0f0f;
@@ -65,10 +79,9 @@ a:hover
 }
 
 .navigationBody
-{
+{  
   margin-left:10em;
   padding: 5px 200px 10px 25px;
-  height:1000px;
 }
 
 .contentBox
@@ -79,13 +92,15 @@ a:hover
     border-style: outset;
     border-width: thin;
     border-color: rgba(0, 0, 0, 0.4);
+    padding: 5px 5px 5px 15px;
+    margin: 15px;
     /* box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4); */
 }
 
 .contentBox p , .tip p
 {       
   text-align: left;
-  padding: 5px 5px 5px 15px;
+  
 }
 
 
