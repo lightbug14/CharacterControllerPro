@@ -93,17 +93,14 @@ ul
     border-width: thin;
     border-color: rgba(0, 0, 0, 0.4);
     padding: 5px 5px 5px 15px;
-    margin: 15px;
+    margin: 10px 10px 10px 0px;
     /* box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4); */
 }
 
 .contentBox p , .tip p
 {       
-  text-align: left;
-  
+  text-align: left;  
 }
-
-
 
 .tip
 {       
@@ -113,4 +110,6 @@ ul
     border-style: dashed;
     border-width: thin;
     border-color: rgba(0, 0, 0, 0.4);
+    padding: 5px 5px 5px 5px;
+    margin: 10px 10px 10px 0px;
 }
