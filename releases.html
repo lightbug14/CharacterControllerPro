@@ -25,7 +25,47 @@
     <div class = "navigationBody">
         
         <h1>Releases</h1>        
+        
+        <div class="contentBox">
+            <h2 >1.0.2</h2>
 
+            
+            <h4>Added</h4>
+
+            <ul>
+                <li>Animator: new play "Transition" and "PlayState" modes. Now the states can be use either by playing them directly (Animator.Play) or by using triggers/transitions.</li>
+                <li>CharacterAnimation: the animation component is now using FixedUpdate rather than Update to handle the states.</li>
+                <li>CharacterActor: new "TargetPosition" public property.</li>
+                <li>CharacterActor: new "RigidbodyVelocity" public property.</li>
+                <li>CharacterActor: new "RigidbodyStaticVelocity" public property.</li>
+                <li>Camera3D: position interpolation is now divided into "planar" (the plane formed by the character up direction) and "up". Both interpolations can be configured separately.</li>
+                <li>CharacterGraphics: rotation offset. This basically will offset the orientation of the graphics object.</li>
+                <li>CharacterGraphics: "Rotation" and "Scale" facing direction modes.</li>
+            </ul>
+
+            <h4>Changes</h4>
+                
+            <ul>
+                <li>3D Scene: it has been modify a little.</li>
+                <li>Demo Character: the default Demo character model has been completely replaced with another one (a humanoid model).</li>
+                <li>Crouch: it is called "Shrink" now, since it's more appropriate.</li>
+                <li>Arrow modifier: it is called "Gravity modifier", since it's more appropriate.</li>
+                <li>CharacterAnimation: now it uses hashes rather than strings.</li>
+                <li>CharacterActor: the character will use the graphics object forward as the desired forward direction, rather than transform.forward (for3D) and transform.right (for 2D).</li>
+            </ul>
+
+            <h4>Fixed</h4>                
+                
+            <ul>
+                <li>CharacterParticles: the CharacterAnimation caused an error when the CharacterParticles component was disabled (due to a missing "PlayFootstep" method).</li>
+                <li>Crouch: the character didn't change its size when standing on steep slopes.</li> 
+                <li>Graphics: the CharacterGraphics component couldn't handle sprites properly. It was using they forward direction as the graphics forward (making the sprite to face towards the right direction).</li>
+                <li>Step handling: now the steps handling should be much more smoother than before.</li>
+                <li>Gravity modifiers: incorrect facing direction when the character entered a gravity modifier.</li>
+            </ul>
+        </div>
+
+        <!--  -------------------------------------------------  -->
               
         
         <div class="contentBox">
