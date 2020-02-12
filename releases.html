@@ -24,7 +24,52 @@
 
     <div class = "navigationBody">
         
-        <h1>Releases</h1>        
+        <h1>Releases</h1> 
+        
+        <div class="contentBox">
+            <h2 >1.0.3</h2>
+<!-- 
+            Added:
+- API algunas cosas chiquiticas
+- CharacterActorBehaviour
+- Contacts
+- Rigidbody response -> max contact velocity
+- Debug gizmos c actor
+
+Changes:
+- vertical parameters -> jump
+- physics -> physicsComponent
+- OnContactHit replaced by the contacts info!!!
+
+Fixed:
+- lo sel jump disabled canc mode
+- dash responde a collisions! 
+
+-->
+            <h4>Added</h4>
+
+            <ul>
+                <li>CharacterActorBehaviour: The character actor component now runs its own "behaviour" before anything else (ensuring a correct execution order). The CharacterStateController has been converted into a CharacterActorBehaviour.</li>
+                <li>Contacts: The PhysicsComponent now is capable of collecting all the contacts (in a frame) from the OnCollisionEnter and OnCollisionStay callbacks.</li>
+                <li>Collision response contacts: The CharacterActor now contains a list of contacts that come from OnCollisionEnter callbacks, due to dynamic rigidbodies that use the "Contact Rigidbodies" tag. This is used to create the external velocity in the NormalMovement state.</li>
+                <li>Max. Rigidbody response velocity: The response velocity now can be clamped to a maximum value.</li>
+                <li>Debug Gizmos toggle: The CharacterActor allows to show/hide the gizmos.</li>                
+            </ul>
+
+            <h4>Changes</h4>
+            <ul>
+                <li>The "Performance" scene has been re-designed.</li>
+                <li>Jump variables names: some of the jump-related variable names (NormalMovement component) has been changed.</li>
+            </ul>
+
+            <h4>Fixed</h4>                
+            <ul>
+                <li>Jump: The character was unable to jump when the "Jump cancellation mode" was disabled.</li>
+                <li>Dash: The character was unable to react to collisions during the Dash state.</li>
+            </ul>
+        </div>
+
+        <!--  -------------------------------------------------  -->
         
         <div class="contentBox">
             <h2 >1.0.2</h2>
