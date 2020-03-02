@@ -24,29 +24,38 @@
     <div class = "navigationBody">
         
         <h1>Releases</h1> 
+
+        <div class="contentBox">
+            <h2 >1.0.4</h2>
+
+            <h4>Added</h4>
+            <ul>
+                <li>Multi-triggers: This means that the character is able to recognize more than one trigger at the same time, allowing to interesting gameplay mechanics.</li>
+                <li>Invert axis: Now the "InputAxes" component allows to invert the horizontal and/or vertical axis.</li>  
+                <li>Interact: A new input axis ("Interact") has been added.</li> 
+                <li>Camera inputs: "cameraHorizontalAxis", "cameraVerticalAxis" and "cameraZoomAxis" have been added to the input data.</li>               
+            </ul>
+
+            <h4>Changes</h4>
+            <ul>
+                <li>The scene controller now must be added to the scene. Just drag and drop the "Scene Controller" prefab into the scene, done.</li>
+                <li>The "3D Scene" scene has been modified (multiple triggers).</li>
+                <li>The "Mobile Scene" scene has been modified.</li>
+            </ul>
+
+            <h4>Fixes</h4>                
+            <ul>
+                <li>Import errors: Due to some prefab missing references a bunch of errors were shown on the console when importing the package.</li>
+                <li>Not grounded jump: The character wasn't reseting the available jumps count.</li>
+                <li>Material vs trigger: When entering a non-material trigger the character was resetting its material data (default material).</li>
+                <li>Camera 3D: The camera was looking at a wrong target position.</li>
+            </ul>
+        </div>
         
         <div class="contentBox">
             <h2 >1.0.3</h2>
-<!-- 
-            Added:
-- API algunas cosas chiquiticas
-- CharacterActorBehaviour
-- Contacts
-- Rigidbody response -> max contact velocity
-- Debug gizmos c actor
 
-Changes:
-- vertical parameters -> jump
-- physics -> physicsComponent
-- OnContactHit replaced by the contacts info!!!
-
-Fixed:
-- lo sel jump disabled canc mode
-- dash responde a collisions! 
-
--->
             <h4>Added</h4>
-
             <ul>
                 <li>CharacterActorBehaviour: The character actor component now runs its own "behaviour" before anything else (ensuring a correct execution order). The CharacterStateController has been converted into a CharacterActorBehaviour.</li>
                 <li>Contacts: The PhysicsComponent now is capable of collecting all the contacts (in a frame) from the OnCollisionEnter and OnCollisionStay callbacks.</li>
@@ -62,7 +71,7 @@ Fixed:
                 <li>Jump variables names: some of the jump-related variable names (NormalMovement component) has been changed.</li>
             </ul>
 
-            <h4>Fixed</h4>                
+            <h4>Fixes</h4>                
             <ul>
                 <li>Jump: The character was unable to jump when the "Jump cancellation mode" was disabled.</li>
                 <li>Dash: The character was unable to react to collisions during the Dash state.</li>
@@ -76,7 +85,6 @@ Fixed:
 
             
             <h4>Added</h4>
-
             <ul>
                 <li>Animator: new play "Transition" and "PlayState" modes. Now the states can be use either by playing them directly (Animator.Play) or by using triggers/transitions.</li>
                 <li>CharacterAnimation: the animation component is now using FixedUpdate rather than Update to handle the states.</li>
@@ -100,7 +108,7 @@ Fixed:
                 <li>CharacterActor: the character will use the graphics object forward as the desired forward direction, rather than transform.forward (for3D) and transform.right (for 2D).</li>
             </ul>
 
-            <h4>Fixed</h4>                
+            <h4>Fixes</h4>                
                 
             <ul>
                 <li>CharacterParticles: the CharacterAnimation caused an error when the CharacterParticles component was disabled (due to a missing "PlayFootstep" method).</li>
@@ -117,7 +125,6 @@ Fixed:
             <h2>1.0.1</h2>
             
             <h4>Added</h4>
-
             <ul>
                 <li>RigidbodyComponent component.</li>
                 <li>ColliderComponent component.</li>
@@ -137,7 +144,7 @@ Fixed:
                 <li>The kinematic platforms and the cameras are now kinematic actors.</li>
             </ul>
 
-            <h4>Fixed</h4>
+            <h4>Fixes</h4>
         
             <ul>
                 <li>A bug with the vertical not grounded movement (CharacterMotor). This was making the character to slowly descend (depending on the skinWidth value) even if the vertical velocity was zero.</li>
