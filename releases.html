@@ -48,6 +48,7 @@
             <h4>Fixes</h4>                
             <ul>
                 <li>Import errors: Due to some prefab missing references a bunch of errors were shown on the console when importing the package.</li>
+                <li>Character Actions: The character was resetting the actions incorrectly when there were two or more "FixedUpdate" calls between "Update" calls. This was causing the character to stop moving when the framerate was really low.</li>
                 <li>Not grounded jump: The character wasn't reseting the available jumps count.</li>
                 <li>Material vs trigger: When entering a non-material trigger the character was resetting its material data (default material).</li>
                 <li>Camera 3D: The camera was looking at a wrong target position.</li>
