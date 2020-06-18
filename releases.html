@@ -21,9 +21,79 @@
         </ul> 
     </nav>
 
+    
+
     <div class = "navigationBody">
         
         <h1>Releases</h1> 
+
+        <div class="contentBox">
+            <h2 >1.1.0</h2>
+            
+            <h4>Added</h4>
+            <ul>
+            <li>Character Actor</li>
+            <ul>
+                <li>Kinematic character (no collision detection): You can enable/disable the "isKinematic" option anytime, from the CharacterActor. This will NOT transform the dynamic character into a proper kinematic character, it will just allow the character to pass through walls.</li>
+                <li>Step up/down transition: The step up/down speed can be controlled in the CharacterActor inspector. This will basically help to prevent abrupt changes to the character vertical movement (grounded).</li>
+                <li>Grounded and NotGrounded time: You can now easily get the time the character has been grounded or not.</li>
+                <li>Character Actor state: The character always had two very important flags, "grounded" and "stable". Now you can check for the "state" of the CharacterActor, which basically involves a combination of these two flags. For example: StableGrounded (Grounded && Stable), NotGrounded ( !Grounded ) and UnstableGrounded (Grounded && !Stable ).</li>
+                <li>External velocity: The velocity caused by the Physics simulation (e.g. a heavier object hitting the character) can be added to the rigidbody original velocity (called input velocity). Basically with this option you are able to handle this effect, whether you want complete control over the velocity (ignoring it), or making the character react to external impulses (for "free", without having to manually process these collisions using contacts).</li>                
+            </ul>
+
+            <li>Animation</li>
+            <ul>
+                <li>Animator: Every CharacterState has access to the Animator component. The state machine will find and "link" the component automatically (it does not need to be in the same object).</li>
+                <li>Root motion: Enable/Disable root motion from within the state anytime. Basically the position and rotation of the character will be controlled by the animation clip.</li> 
+                <li>IK support: A new virtual method (UpdateIK) is dedicated to modify the IK behaviour (a "linked" version of the OnAnimatorIK message).</li> 
+                <li>New "Demo character": A new fully animated 3D "Humanoid" character, replacing the old one.</li>                 
+            </ul>
+
+            <li>Actions</li>
+            <ul>
+                <li>Character Action Asset: Create your custom actions using the editor (ScriptableObject).</li> 
+                <li>AI Behaviours: The AI logic is now separated from the CharacterBrain component, meaning that you can add your custom behaviours. The asset includes the same behaviours as before (Follow and Sequence) and a new one (Wander).</li>    
+
+            </ul>
+
+            <li>States</li>
+            <ul>
+                <li>Run input mode (hold or toggle).</li>
+                <li>Crouch (hold or toggle), with the proper model animation.</li>
+                <li>Coyote time (NormalMovement state)</li>
+                <li>Ledge hanging state.</li>
+                <li>Ladder climbing state.</li>                
+            </ul>
+
+            <li>Camera</li>
+            <ul>
+                <li>First person (Camera3D): The Camera3D now has the first person mode, as well as a hideBody option to hide the character mesh (widely used in first person characters).</li> 
+                <li>Input handler: The Camera3D now uses an input handler as the main input gathering method.</li>
+            </ul>
+
+        </ul>
+
+            <h4>Changes</h4>
+            <ul>
+                <li>Demo content: Most of the example components (previously in the Implementation part) have been moved to the Demo (e.g. states, scriptable objects, camera scripts, materials, etc ). Hopefully this will make much more clear what's part of the controller/system, and what's optional content.</li>
+                <li>Character hierarchy: Most of the character components (ignoring CharacterActor and CharacterBody) can be placed anywhere within the character hierarchy (character object). This will allow you to organize your content better (if you want to).</li>.
+                <li>Instant changes: The character will process all the important changes (in position, rotation, grounded state, etc) instantly. For example, after you use "ForceNotGrounded", the character grounded state will be false.</li>
+                <li>Vertical Alignment: The "Gravity" settings has been changed to "Vertical Alignment" settings (since this functionality has nothing to do with gravity itself).</li>
+                <li>State "Name" property: This property has been removed. In order to refer to a particular state, use the GetState method from the CharacterStateController component.</li>
+                <li>MaterialsController: The materials are no longer a part of the state controller, since this component wasn't really needed for the state machine (see the "Demo content" from above). Instead, now there is a MaterialController component available for you to use. See the "Environment" child object (any character from the demo scenes).</li>
+                <li>Material acceleration/deceleration: The "control" parameter has been replaced with acceleration and deceleration (just to avoid confusion).</li>
+                <li>CharacterGraphics: This component is no longer required for the graphics object. Instead, it has been splitted into two more extra graphics-related components (optional).</li>
+            </ul>
+            
+            <h4>Fixes</h4>                
+            <ul>
+                <li>Abrupt deceleration (NormalMovement state): The character was abruptly decelerating after a jump.</li>
+                <li>Multi-State transitions: The FSM was not able to check multiple potential states at once.</li>
+                <li>CharacterAction phase: It was possible to modify the "phase" of the action (e.g. a button action could be "pressed" and "released" at the same time). This </li>
+            </ul>
+        </div>
+
+
 
         <div class="contentBox">
             <h2 >1.0.5</h2>
