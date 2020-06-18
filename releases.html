@@ -58,17 +58,20 @@
 
             <li>States</li>
             <ul>
-                <li>Run input mode (hold or toggle).</li>
-                <li>Crouch (hold or toggle), with the proper model animation.</li>
-                <li>Coyote time (NormalMovement state)</li>
                 <li>Ledge hanging state.</li>
-                <li>Ladder climbing state.</li>                
+                <li>Ladder climbing state.</li> 
+                <li></li>
+                <li>Run input mode (hold or toggle) for the NormalMovement state.</li>
+                <li>Crouch input mode (hold or toggle) for the NormalMovement state (now with a proper model animation).</li>
+                <li>Coyote time for the NormalMovement state.</li>
+                <li>Speed limit + Acceleration/Deceleration settings. Now you can control these settings separately for planar and vertical movement (this is fully compatible with the materials settings).</li>
+                               
             </ul>
 
             <li>Camera</li>
             <ul>
-                <li>First person (Camera3D): The Camera3D now has the first person mode, as well as a hideBody option to hide the character mesh (widely used in first person characters).</li> 
-                <li>Input handler: The Camera3D now uses an input handler as the main input gathering method.</li>
+                <li>First person mode (Camera3D): The Camera3D now has the first person mode, as well as a hideBody option to hide the character mesh (widely used in first person characters).</li> 
+                <li>Input handler for the camera: The Camera3D now uses an input handler as the main input gathering method.</li>
             </ul>
 
         </ul>
@@ -89,7 +92,7 @@
             <ul>
                 <li>Abrupt deceleration (NormalMovement state): The character was abruptly decelerating after a jump.</li>
                 <li>Multi-State transitions: The FSM was not able to check multiple potential states at once.</li>
-                <li>CharacterAction phase: It was possible to modify the "phase" of the action (e.g. a button action could be "pressed" and "released" at the same time). This </li>
+                <li>CharacterAction phase: It was possible to modify the "phase" of the action (e.g. a button action could be "pressed" and "released" at the same time). Now you can only get/set the value of a particular action.</li>
             </ul>
         </div>
 
