@@ -28,6 +28,22 @@
         <h1>Releases</h1> 
 
         <div class="contentBox">
+            <h2 >1.1.1</h2>
+
+            <h4>Added</h4>
+            <ul>
+                <li>Crouch: a "enableCrouch" toggle was added to the crouch settings (NormalMovement state).</li>
+                <li>New input system handler: A new input handler component (based on the implementation presented in the online documentation) has been added. Since managing external packages and dependencies can be difficult and sometimes buggy (at least in 2019.3), the code has been commented from top to bottom (to avoid obvious compile errors). If you have installed the new input system, you only need to uncomment the entire script and use this new component as a custom input handler. For more information about this topic, please see the instructions presented in the "How to..." section (online documentation).</li>
+            </ul>
+
+            <h4>Fixes</h4>                
+            <ul>
+                <li>External movement reference: A null external movement reference (CharacterStateController) was causing a null reference exception, with no warning mentioning the cause. Now it should at least print a warning in the console (without any null reference exception).</li>
+                <li>Transitions: The state machine was skipping one element of the transition queue everytime (the "for" loop was replaced by a "while").</li>
+            </ul>
+        </div>
+
+        <div class="contentBox">
             <h2 >1.1.0</h2>
             
             <h4>Added</h4>
