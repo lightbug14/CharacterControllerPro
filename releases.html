@@ -28,6 +28,26 @@
         <h1>Releases</h1> 
 
         <div class="contentBox">
+            <h2 >1.1.2</h2>
+
+            <h4>Added</h4>
+            <ul>
+                <li>Unstable grounded jump: The NormalMovement incorporates a new variable, useful to allow (or not) the character to jump on unstable grounds (see vertical movement parameters). By default this variable is false.</li>
+                <li>External velocity settings: More settings related to this feature, now you can choose to ignore (or not) the external velocity caused by static colliders and/or kinematic rigidbodies.</li>
+            </ul>
+
+            <h4>Fixed</h4>                
+            <ul>
+                <li>Capsule model: The capsule height didn't match the CCP Character model.</li>
+                <li>Custom input handler: It was impossible to add a custom input handler component to the CharacterBrain.</li>
+                <li>Graphics scaler offset: There wasn't a way to handle the offset of the graphics when changing the scale. 
+                    This was a problem for objects with a pivot at the center (e.g. the default Unity's capsule).</li>
+                <li>Slide (NormalMovement state): Sometimes the character went from "state grounded" to "unstable" state due to collision detection issues.</li>
+                <li>AISequenceBehaviour: There was a bug with the OnWallHit type of sequence, basically a false contact, making the character to remain in a loop (same action over and over again).</li>
+            </ul>
+        </div>
+
+        <div class="contentBox">
             <h2 >1.1.1</h2>
 
             <h4>Added</h4>
@@ -36,7 +56,7 @@
                 <li>New input system handler: A new input handler component (based on the implementation presented in the online documentation) has been added. Since managing external packages and dependencies can be difficult and sometimes buggy (at least in 2019.3), the code has been commented from top to bottom (to avoid obvious compile errors). If you have installed the new input system, you only need to uncomment the entire script and use this new component as a custom input handler. For more information about this topic, please see the instructions presented in the "How to..." section (online documentation).</li>
             </ul>
 
-            <h4>Fixes</h4>                
+            <h4>Fixed</h4>                
             <ul>
                 <li>External movement reference: A null external movement reference (CharacterStateController) was causing a null reference exception, with no warning mentioning the cause. Now it should at least print a warning in the console (without any null reference exception).</li>
                 <li>Transitions: The state machine was skipping one element of the transition queue everytime (the "for" loop was replaced with a "while").</li>
@@ -105,7 +125,7 @@
                 <li>CharacterGraphics: This component is no longer required for the graphics object. Instead, it has been splitted into two more extra graphics-related components (optional).</li>
             </ul>
             
-            <h4>Fixes</h4>                
+            <h4>Fixed</h4>                
             <ul>
                 <li>Abrupt deceleration (NormalMovement state): The character was abruptly decelerating after a jump.</li>
                 <li>Multi-State transitions: The FSM was not able to check multiple potential states at once.</li>
@@ -123,7 +143,7 @@
                 <li>Input data: the camera now responds to "Camera Horizontal", "Camera Vertical" and "Camera Zoom" inputs.</li>
             </ul>
 
-            <h4>Fixes</h4>                
+            <h4>Fixed</h4>                
             <ul>
                 <li>Scene error: "[Physics.PhysX] QuickHullConvexHullLib ...". This was caused by a plane mesh with a convex MeshCollider on it.</li>
             </ul>
@@ -149,7 +169,7 @@
                 <li>The "Mobile Scene" scene has been modified.</li>
             </ul>
 
-            <h4>Fixes</h4>                
+            <h4>Fixed</h4>                
             <ul>
                 <li>Import errors: Due to some prefab missing references a bunch of errors were shown on the console when importing the package.</li>
                 <li>Character Actions: The character was resetting the actions incorrectly when there were two or more "FixedUpdate" calls between "Update" calls. This was causing the character to stop moving when the framerate was really low.</li>
@@ -178,7 +198,7 @@
                 <li>Jump variables names: some of the jump-related variable names (NormalMovement component) has been changed.</li>
             </ul>
 
-            <h4>Fixes</h4>                
+            <h4>Fixed</h4>                
             <ul>
                 <li>Jump: The character was unable to jump when the "Jump cancellation mode" was disabled.</li>
                 <li>Dash: The character was unable to react to collisions during the Dash state.</li>
@@ -215,7 +235,7 @@
                 <li>CharacterActor: the character will use the graphics object forward as the desired forward direction, rather than transform.forward (for3D) and transform.right (for 2D).</li>
             </ul>
 
-            <h4>Fixes</h4>                
+            <h4>Fixed</h4>                
                 
             <ul>
                 <li>CharacterParticles: the CharacterAnimation caused an error when the CharacterParticles component was disabled (due to a missing "PlayFootstep" method).</li>
@@ -251,7 +271,7 @@
                 <li>The kinematic platforms and the cameras are now kinematic actors.</li>
             </ul>
 
-            <h4>Fixes</h4>
+            <h4>Fixed</h4>
         
             <ul>
                 <li>A bug with the vertical not grounded movement (CharacterMotor). This was making the character to slowly descend (depending on the skinWidth value) even if the vertical velocity was zero.</li>
