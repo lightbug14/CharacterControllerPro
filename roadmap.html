@@ -50,32 +50,22 @@
             <h3>In mind</h3>
             
             <ul>
-                <li>Core</li>
-                <ul>                
-                    
-                </ul>
-
-                <li>Implementation</li>
-                <ul>                
-                    <li>Character actions asset.</li>
-                    <li>Footsteps with audio.</li>
-                </ul>
-                
+                <li>Implementation of the character "vision", this can help a lot with specific gameplay mechanics where the camera should behave in one particular way. This 
+                    feature will be really helpful in combination with camera assets.
+                </li>
+                <li>Support for dynamic platforms while being "not grounded" (think of a character hanging from a moving/rotating platform).</li>    
             </ul>
             
             
             <h3>In Development</h3>
             
             <ul>
-                <li>Core</li>
-                <ul>                
-                    <li>One Way platforms for 2D and 3D.</li>
-                </ul>
-
-                <li>Implementation</li>
-                <ul>                
-                    <li>First person camera mode.</li>
-                </ul>            
+                
+                <li>Playable-based animation system, supporting both individual clips and animator controllers for each state.</li>
+                <li>Ground Alignment for the graphics object.</li>
+                <li>Unity's ("new") Input system as the default input handler. This means this system will be a requirement (you'll need to download the package from the package manager). However, the old 
+                    system will be still supported (using a custom input handler).
+                </li>
             
             </ul>
                        
@@ -83,20 +73,9 @@
             <h3>Ready</h3>    
             
             <ul>
-                <li>Core</li>
-                <ul>                
-                    <li>Kinematic movement (without collision detection).</li>                    
-                </ul>
-
-                <li>Implementation</li>
-                <ul>               
-                    <li>Ladder climbing.</li>
-                    <li>Rope climbing (vertical only).</li>
-                    <li>Auto follow camera (circular).</li>
-                    <li>Root motion.</li>
-                    <li>Better animation system (integrated with the state controller component).</li>
-                    <li>Better properties for Surfaces and Volumes (add velocity, set velocity, set body size, etc). This is useful for jump pads.</li>
-                </ul>            
+                <li>One Way platforms for 2D and 3D.</li>   
+                <li>No need for a SceneController anymore.</li>   
+                <li>Support for dynamic platforms.</li>         
             
             </ul>
         
